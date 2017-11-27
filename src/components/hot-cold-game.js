@@ -1,7 +1,7 @@
 import React from 'react';
 import GuessCard from './guess-card';
 import GuessForm from './guess-form';
-import GuessTracker from './guess-tracker';
+// import GuessTracker from './guess-tracker';
 
 
 // export default class HotColdGame extends React.Component {
@@ -26,10 +26,12 @@ export default function HotColdGame(props) {
                 <h1>HOT or COLD</h1>
                 <GuessCard />
                 <GuessForm />
-                <GuessTracker />
+
             </div>
         );
     // }
 }
 
+
+/* <GuessTracker /> */
 
