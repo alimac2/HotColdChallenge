@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function GuessForm(props){
+export default function GuessForm(props) {
     return (
         <div>
             <form onSubmit={e => e.preventDefault()}>
