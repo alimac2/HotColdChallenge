@@ -7,7 +7,6 @@ export default function GuessForm(props) {
                 <input type="number" name="guess" placeholder="Enter your Guess"/>
                 <button type="submit">Guess</button>
             </form>
-            <p>Guess #<span></span></p>
         </div>
     );
 }

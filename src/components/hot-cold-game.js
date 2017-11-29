@@ -1,7 +1,8 @@
 import React from 'react';
-import GuessCard from './guess-card';
-import GuessForm from './guess-form';
-// import GuessTracker from './guess-tracker';
+import GuessSection from './guess-section';
+import Header from './header';
+import InfoSection from './info-section';
+// import GuessHistory from './guess-history';
 
 
 // export default class HotColdGame extends React.Component {
@@ -13,25 +14,20 @@ import GuessForm from './guess-form';
 
 export default function HotColdGame(props) {
     
+    function handleClick() {
+        console.log('hello');
+    }
     // render() {
         return (
             <div>
-                <nav>
-                    <ul>
-                        <li><a href="#">WHAT ?</a></li>
-                        <li><a href="#">+ NEW GAME</a></li>
-                    </ul>
-                </nav>
-
-                <h1>HOT or COLD</h1>
-                <GuessCard />
-                <GuessForm />
-
+                <Header handleClick={() => handleClick()} />
+                <GuessSection />
+                <InfoSection />
             </div>
         );
     // }
 }
 
 
-/* <GuessTracker /> */
+/* <GuessHistory /> */
 
