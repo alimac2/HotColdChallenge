@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function GuessCount(props) {
     return(
-        <p>Guess #<span></span></p>
+        <p onChange={() => props.onGuessCount()}>Guess #<span>{props.guessCount}</span></p>
     );
 }

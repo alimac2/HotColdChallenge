@@ -5,8 +5,8 @@ export default function NavBar(props) {
     return(
         <nav>
             <ul>
-                <li><a href="#" onClick={() => props.handleClick()}>WHAT ?</a></li>
-                <li><a href="#" onClick={() => props.handleClick()}>+ NEW GAME</a></li>
+                <li><a href="#" onClick={() => props.handleNavClick()}>WHAT ?</a></li>
+                <li><a href="#" onClick={() => props.handleNavClick()}>+ NEW GAME</a></li>
             </ul>
         </nav>
     );

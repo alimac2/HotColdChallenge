@@ -14,13 +14,15 @@ import InfoSection from './info-section';
 
 export default function HotColdGame(props) {
     
-    function handleClick() {
-        console.log('hello');
+    function handleNavClick() {
+        console.log('clicked nav links');
     }
+
+    
     // render() {
         return (
             <div>
-                <Header handleClick={() => handleClick()} />
+                <Header handleNavClick={() => handleNavClick()} />
                 <GuessSection />
                 <InfoSection />
             </div>
