@@ -8,7 +8,7 @@ import GuessHistory from './guess-history';
 
 export default function GuessSection(props) {
     return (
-        <div className="guess-card">
+        <div className="guess-section">
             <h2>Make your Guess!</h2>
             <GuessForm />
             <GuessCount />
