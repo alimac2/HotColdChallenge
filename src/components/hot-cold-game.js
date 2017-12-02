@@ -5,33 +5,35 @@ import InfoSection from './info-section';
 // import GuessHistory from './guess-history';
 
 
-// export default class HotColdGame extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
+export default class HotColdGame extends React.Component {
+     constructor(props) {
+         super(props);
+        this.state = {
                 /*guessNumber: ''*/
-    //     }
-
-export default function HotColdGame(props) {
+        }
+    }
     
-    function onHandleInfo() {
+    onHandleInfo() {
         console.log('clicked what link');
     }
 
-    function onNewGame() {
+    onNewGame() {
         console.log('clicked new game')
     }
 
     
-    // render() {
+    render() {
         return (
             <div>
-                <Header onHandleInfo={() => onHandleInfo()} onNewGame={() => onNewGame()} />
+                <Header 
+                    onHandleInfo={() => this.onHandleInfo()} 
+                    onNewGame={() => this.onNewGame()} 
+                />
                 <GuessSection />
                 <InfoSection />
             </div>
         );
-    // }
+    }
 }
 
 
