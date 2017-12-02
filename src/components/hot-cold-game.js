@@ -9,7 +9,9 @@ export default class HotColdGame extends React.Component {
      constructor(props) {
          super(props);
         this.state = {
-                /*guessNumber: ''*/
+                guessNumber: 80,
+                guessHistory: [1, 6, 12, 39],
+                feedback: 'Make your Guess!'
         }
     }
     
