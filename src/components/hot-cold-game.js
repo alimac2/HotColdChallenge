@@ -11,7 +11,7 @@ export default class HotColdGame extends React.Component {
         this.state = {
                 guessNumber: 80,
                 guessHistory: [1, 6, 12, 39],
-                feedback: 'Make your Guess!'
+                feedback: 'You are Hot!'
         }
     }
     
@@ -31,7 +31,10 @@ export default class HotColdGame extends React.Component {
                     onHandleInfo={() => this.onHandleInfo()} 
                     onNewGame={() => this.onNewGame()} 
                 />
-                <GuessSection />
+                <GuessSection 
+                    guessHistory={this.state.guessHistory}
+                    feedback={this.state.feedback}
+                />
                 <InfoSection />
             </div>
         );
