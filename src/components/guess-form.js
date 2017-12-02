@@ -5,7 +5,7 @@ export default function GuessForm(props) {
         <div>
             <form onSubmit={e => e.preventDefault()}>
                 <input type="text" name="guess" placeholder="Enter your Guess"/>
-                <button type="submit" onClick={() => props.onNewGuess()}>Guess</button>
+                <button type="submit" onClick={() => props.onMakeGuess()}>Guess</button>
             </form>
         </div>
     );

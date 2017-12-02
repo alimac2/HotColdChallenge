@@ -14,12 +14,19 @@ export default class HotColdGame extends React.Component {
                 feedback: 'You are Hot!'
         }
     }
+
+    makeGuess() {
+        this.setState(
+            {feedback: 'You are Cold!'}
+        ) 
+    }
     
-    onHandleInfo() {
+    
+    handleInfo() {
         console.log('clicked what link');
     }
 
-    onNewGame() {
+    newGame() {
         console.log('clicked new game')
     }
 
@@ -28,10 +35,11 @@ export default class HotColdGame extends React.Component {
         return (
             <div>
                 <Header 
-                    onHandleInfo={() => this.onHandleInfo()} 
-                    onNewGame={() => this.onNewGame()} 
+                    onHandleInfo={() => this.handleInfo()} 
+                    onNewGame={() => this.newGame()} 
                 />
                 <GuessSection 
+                    onMakeGuess={() => this.makeGuess()}
                     guessHistory={this.state.guessHistory}
                     feedback={this.state.feedback}
                 />
