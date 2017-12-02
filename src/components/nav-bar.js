@@ -5,7 +5,7 @@ export default function NavBar(props) {
     return(
         <nav>
             <ul>
-                <li><a href="#" onClick={() => props.handleInfoLink()}>WHAT ?</a></li>
+                <li><a href="#" onClick={() => props.onHandleInfo()}>WHAT ?</a></li>
                 <li><a href="#" onClick={() => props.onNewGame()}>+ NEW GAME</a></li>
             </ul>
         </nav>

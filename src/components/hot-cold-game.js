@@ -14,7 +14,7 @@ import InfoSection from './info-section';
 
 export default function HotColdGame(props) {
     
-    function handleInfoLink() {
+    function onHandleInfo() {
         console.log('clicked what link');
     }
 
@@ -26,7 +26,7 @@ export default function HotColdGame(props) {
     // render() {
         return (
             <div>
-                <Header handleInfoLink={() => handleInfoLink()} onNewGame={() => onNewGame()} />
+                <Header onHandleInfo={() => onHandleInfo()} onNewGame={() => onNewGame()} />
                 <GuessSection />
                 <InfoSection />
             </div>
