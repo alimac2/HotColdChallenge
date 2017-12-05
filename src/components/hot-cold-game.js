@@ -9,14 +9,24 @@ export default class HotColdGame extends React.Component {
         this.state = {
                 secretNumber: 80,
                 guessHistory: [1, 6, 12, 39],
-                feedback: 'You are Hot!'
+                feedback: 'Make you Guess!'
         }
     }
 
     makeGuess(value) {
         console.log(value);
         console.log(typeof value);
-        let feedback = 'You are cold';
+        let feedback = ""
+        
+        if (value <= 74 || value >= 86) {
+           let feeback = 'You are Cold!'
+        }
+        if (value >= 75 || value <= 85) {
+           let feedback = "You are Getting Warm!"
+        }
+        if (value === 80) {
+           let  feeback = "You are Hot!"
+        }        
 
         this.setState(
             {feedback: feedback,
