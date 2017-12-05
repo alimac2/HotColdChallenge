@@ -9,18 +9,23 @@ export default class HotColdGame extends React.Component {
      constructor(props) {
          super(props);
         this.state = {
-                guessNumber: 80,
+                secretNumber: 80,
                 guessHistory: [1, 6, 12, 39],
                 feedback: 'You are Hot!'
         }
     }
 
-    makeGuess() {
+    makeGuess(value) {
+        console.log(value);
+        console.log(typeof value);
+        let feedback = 'You are cold';
+
         this.setState(
-            {feedback: 'You are Cold!'}
+            {feedback: feedback,
+             guessHistory: [...this.state.guessHistory, value]   
+            }
         ) 
     }
-    
     
     handleInfo() {
         console.log('clicked what link');
@@ -39,7 +44,7 @@ export default class HotColdGame extends React.Component {
                     onNewGame={() => this.newGame()} 
                 />
                 <GuessSection 
-                    onMakeGuess={() => this.makeGuess()}
+                    onMakeGuess={(value) => this.makeGuess(value)}
                     guessHistory={this.state.guessHistory}
                     feedback={this.state.feedback}
                 />
