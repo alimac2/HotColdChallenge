@@ -2,8 +2,7 @@ import React from 'react';
 import GuessForm from './guess-form';
 import GuessCount from './guess-count';
 import GuessHistory from './guess-history';
-// import GuessForm from './guess-form';
-// import GuessHistory from './guess-history';
+
 
 
 export default function GuessSection(props) {
@@ -17,5 +16,3 @@ export default function GuessSection(props) {
         </div>
     );
 }
-
-/*Make h2 change as user inputs different guesses*/

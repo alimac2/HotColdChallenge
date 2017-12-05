@@ -16,5 +16,3 @@ export default function GuessForm(props) {
         </div>
     );
 }
-
-/*in input tag probably add onChange={e => props.onChange(e.target.value) */
