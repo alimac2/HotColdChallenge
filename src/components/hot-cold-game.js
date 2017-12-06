@@ -45,6 +45,7 @@ export default class HotColdGame extends React.Component {
             }
         ) 
     }
+    /* can we unpack guessHistory a little more? or just spread  operators? */
     
     handleInfo() {
         console.log('clicked what link');
