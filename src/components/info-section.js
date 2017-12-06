@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function InfoSection(props) {
     return(
-        <section>
+        <section id="info-section">
         <h2>What do I do?</h2>
         <p>This is a Hot or Cold Number Guessing Game. The game goes like this:</p>
         <ol>

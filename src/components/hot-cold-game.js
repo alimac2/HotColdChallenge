@@ -7,38 +7,32 @@ export default class HotColdGame extends React.Component {
      constructor(props) {
          super(props);
         this.state = {
-                secretNumber: 80,
+                secretNumber: Math.floor(Math.random() * 100) + 1,
                 guessHistory: [],
                 feedback: 'Make your Guess!'
         }
     }
 
-    /* to make secretNumber random use Math.floor(Math.random() * 100)*/
-
     makeGuess(value) {
-        // console.log(value);
-        console.log(typeof value);
-        value = Number(value); /*or parseInt(value, 10) */
-        let feedback = "";
+        console.log(value);
         
-        if (value <= 74 || value >= 86) {
+        value = Number(value);
+        let feedback = "";
+        console.log(typeof value);
+        let secretNumber = this.state.secretNumber;
+        let diff = Math.abs(value - secretNumber);
+        console.log(diff);
+
+        if (diff === 0) {
+            feedback = "You are on Fire!";
+         } 
+         if (diff <= 9 && diff >= 1) {
+            feedback = "You are Warm!";
+         }
+         if (diff >= 10) {
            feedback = 'You are Cold!';
-        } else if (value >= 75 || value <= 85) {
-           feedback = "You are Warm!";
-        } else if (value === 80) {
-           feedback = "You are on Fire!";
-        }        
-
-        /* 
-        if (value <= secretNumber - 6 || value >= secretNumber + 6) {
-           let feedback = 'You are Cold!'
-        } if else (value >= secretNumber - 5 || value <= secretNumber + 5) {
-           let feedback = "You are Getting Warm!"
-        } if else (value === secretNumber) {
-           let  feedback = "You are Hot!"
-        }    
-        */
-
+        }  
+        
         this.setState(
             {feedback: feedback,
              guessHistory: [...this.state.guessHistory, value]   
@@ -51,7 +45,7 @@ export default class HotColdGame extends React.Component {
         console.log('clicked what link');
     }
 
-    newGame(restart) {
+    newGame() {
         this.setState(
             {
                 secretNumber: 80, /* make random */
@@ -63,11 +57,12 @@ export default class HotColdGame extends React.Component {
 
     
     render() {
+        console.log(this.state.secretNumber);
         return (
             <div>
                 <Header 
                     onHandleInfo={() => this.handleInfo()} 
-                    onNewGame={(restart) => this.newGame(restart)} 
+                    onNewGame={() => this.newGame()} 
                 />
                 <GuessSection 
                     onMakeGuess={(value) => this.makeGuess(value)}

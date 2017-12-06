@@ -39,3 +39,18 @@ a:hover {
 }
 
 
+@keyframes highlight {
+  0% {
+      background: salmon;
+  }
+  100% {
+      background: none;
+  }
+}
+
+/* trigger the keyframe whenever the :target event fires
+in other words, when an internal navigation link is used*/
+#info-section:target {
+  animation: highlight 1s;
+}
+

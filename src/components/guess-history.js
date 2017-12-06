@@ -8,7 +8,6 @@ export default function GuessHistory(props) {
     
     return (
         <ul>
-            <li>10</li>
             {guessHistory}
         </ul>
     );
