@@ -8,25 +8,36 @@ export default class HotColdGame extends React.Component {
          super(props);
         this.state = {
                 secretNumber: 80,
-                guessHistory: [1, 6, 12, 39],
+                guessHistory: [],
                 feedback: 'Make you Guess!'
         }
     }
 
+    /* to make secretNumber random Math.floor(Math.random() * 100)*/
+
     makeGuess(value) {
-        console.log(value);
+        // console.log(value);
         console.log(typeof value);
-        let feedback = ""
+        value = Number(value); /*or parseInt(value, 10) */
+        let feedback = "";
         
         if (value <= 74 || value >= 86) {
-           let feeback = 'You are Cold!'
-        }
-        if (value >= 75 || value <= 85) {
-           let feedback = "You are Getting Warm!"
-        }
-        if (value === 80) {
-           let  feeback = "You are Hot!"
+           feedback = 'You are Cold!';
+        } else if (value >= 75 || value <= 85) {
+           feedback = "You are Warm!";
+        } else if (value === 80) {
+           feedback = "You are on Fire!";
         }        
+
+        /* 
+        if (value <= secretNumber - 6 || value >= secretNumber + 6) {
+           let feedback = 'You are Cold!'
+        } if else (value >= secretNumber - 5 || value <= secretNumber + 5) {
+           let feedback = "You are Getting Warm!"
+        } if else (value === secretNumber) {
+           let  feedback = "You are Hot!"
+        }    
+        */
 
         this.setState(
             {feedback: feedback,
