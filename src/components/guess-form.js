@@ -4,6 +4,7 @@ export default function GuessForm(props) {
     function handleSubmit(e) {
         e.preventDefault();
         const value = e.target.guess.value;
+        /*value.reset();  trying to clear input*/
         props.onMakeGuess(value);
     }
 
