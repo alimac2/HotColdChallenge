@@ -9,11 +9,11 @@ export default class HotColdGame extends React.Component {
         this.state = {
                 secretNumber: 80,
                 guessHistory: [],
-                feedback: 'Make you Guess!'
+                feedback: 'Make your Guess!'
         }
     }
 
-    /* to make secretNumber random Math.floor(Math.random() * 100)*/
+    /* to make secretNumber random use Math.floor(Math.random() * 100)*/
 
     makeGuess(value) {
         // console.log(value);
@@ -51,8 +51,14 @@ export default class HotColdGame extends React.Component {
         console.log('clicked what link');
     }
 
-    newGame() {
-        console.log('clicked new game')
+    newGame(restart) {
+        this.setState(
+            {
+                secretNumber: 80, /* make it random */
+                guessHistory: [],
+                feedback: 'Make your Guess!'   
+            }
+        )
     }
 
     
