@@ -1,0 +1,15 @@
+.guess-section {
+    position: relative;
+    background-color: rgb(46,68,130);
+    width: 380px;
+    height: 380px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 0 auto;
+  }
+  
+
+  .guess-section h2 {
+    background: rgb(190,169,222);
+  }
