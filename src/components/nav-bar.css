@@ -1,0 +1,14 @@
+.what, .new-game {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.what {
+    float: left;
+    margin-left: 15px;
+}
+
+.new-game {
+    float: right;
+    margin-right: 15px;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import './nav-bar.css';
 
 export default function NavBar(props) {
     // console.log(props);
@@ -6,8 +7,8 @@ export default function NavBar(props) {
     return(
         <nav>
             <ul>
-                <li><a href="#info-section" onClick={() => props.onHandleInfo()}>WHAT ?</a></li>
-                <li><a href="#" onClick={() => props.onNewGame()}>+ NEW GAME</a></li>
+                <li className="what"><a href="#info-section" onClick={() => props.onHandleInfo()}>WHAT ?</a></li>
+                <li className="new-game"><a href="#" onClick={() => props.onNewGame()}>+ NEW GAME</a></li>
             </ul>
         </nav>
     );

@@ -40,7 +40,7 @@ a:visited {
 
 @keyframes highlight {
   0% {
-      background: salmon;
+      background: rgb(190,169,222);
   }
   100% {
       background: none;
