@@ -1,0 +1,7 @@
+.guess-count {
+    font-size: 35px;
+}
+
+.guess-count span {
+    color: rgb(238,232,107);
+}
