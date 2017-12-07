@@ -1,4 +1,5 @@
 import React from 'react';
+import './guess-form.css';
 
 export default function GuessForm(props) {
     function handleSubmit(e) {
@@ -10,7 +11,7 @@ export default function GuessForm(props) {
     }
 
     return (
-        <div>
+        <div className="guess-form">
             <form onSubmit={(e) => handleSubmit(e)}>
                 <input type="text" name="guess" placeholder="Enter your Guess"/>
                 <button type="submit">Guess</button>

@@ -1,2 +1,17 @@
+.guess-form button {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 200px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px; 
+}
 
-  
+.guess-form input {
+    width: 200px;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px; 
+}
