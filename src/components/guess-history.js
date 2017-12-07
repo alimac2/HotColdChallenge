@@ -1,4 +1,5 @@
 import React from 'react';
+import './guess-history.css';
 
 export default function GuessHistory(props) {
     // console.log(props.prevGuesses);
@@ -7,7 +8,7 @@ export default function GuessHistory(props) {
     });
     
     return (
-        <ul>
+        <ul className="guess-history">
             {guessHistory}
         </ul>
     );

@@ -1,0 +1,9 @@
+.guess-history {
+    background-color: rgb(135,136,156);
+    display: block;
+}
+
+.guess-history li {
+    background-color: rgb(238,232,107);
+    color: black;
+}

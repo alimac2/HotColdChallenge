@@ -2,7 +2,7 @@ import React from 'react';
 import GuessForm from './guess-form';
 import GuessCount from './guess-count';
 import GuessHistory from './guess-history';
-
+import './guess-section.css';
 
 
 export default function GuessSection(props) {
