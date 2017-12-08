@@ -11,6 +11,10 @@
     border-style: none;
 }
 
+button:hover {
+    background-color: rgb(238,232,107);
+}
+
 .guess-form input {
     width: 200px;
     text-align: center;
